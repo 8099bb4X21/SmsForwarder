@@ -85,10 +85,6 @@ android {
                 arguments = [moduleName: project.getName()]
             }
         }
-
-        ndk {
-            abiFilters buildAbi.split(',')
-        }
     }
 
     signingConfigs {
