@@ -68,4 +68,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: release-apks
-          path: app/build/outputs/apk/release/SmsF_*.apk
+          path: build/app/outputs/apk/release/SmsF_*.apk
