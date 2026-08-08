@@ -178,8 +178,9 @@ android {
         abi {
             enable true
             reset()
-            include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
-            universalApk true
+            // 通过 gradle.properties 中的 buildAbi 控制，逗号分隔多个架构
+            include buildAbi.split(',')
+            universalApk false
         }
     }
     def abiCodes = ['universal': 1, 'armeabi-v7a': 2, 'arm64-v8a': 3, 'x86': 4, 'x86_64': 5]
